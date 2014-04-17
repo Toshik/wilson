@@ -9,6 +9,8 @@ use <bearing.scad>
 
 rod_distance = 45;
 pushfit_d = 8.2;
+belt_hole_width = 10;
+belt_hole_height = 28;
 
 module x_end_base(){
 // Main block
@@ -30,7 +32,7 @@ translate(v=[-1,0,0]){
 // Stress relief
 translate(v=[-5.5-10+1.5,-10-1,30]) cube(size = [20,1,28], center = true);
 difference(){
-	translate(v=[-5.5-10+1.5,-10,30]) cube(size = [10,46,28], center = true);
+	translate(v=[-5.5-10+1.5,-10,30]) cube(size = [belt_hole_width,46,belt_hole_height], center = true);
 
 	
 

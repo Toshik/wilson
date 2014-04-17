@@ -10,7 +10,7 @@ include <configuration.scad>
 use <x-end.scad>
 
 idler_offs_z = -1; // negative here means "up" when installed
-idler_offs_y = 7;
+idler_offs_y = idler_bearing_x_end[IDX_INNER_DIA]/2 + 0;
 
 module x_end_idler_base(){
  x_end_base();
@@ -19,9 +19,10 @@ module x_end_idler_base(){
 module x_end_idler_holes(){
  x_end_holes();
  translate([0,idler_offs_y,idler_offs_z]) {
- #translate(v=[0,-22,30.25]) rotate(a=[0,-90,0]) cylinder(h = 80, r=idler_bearing_inner_d/2+.3, $fn=30);
- #translate(v=[2,-22,30.25]) rotate(a=[0,-90,0]) cylinder(h = 10, r=idler_bearing_inner_d/2 + 1, $fn=30);
- #translate(v=[-22,-22,30.25]) rotate(a=[0,-90,0]) rotate(a=[0,0,30]) cylinder(h = 80, r=idler_bearing_inner_d, $fn=6);
+ #translate(v=[-15+idler_bearing_x_end[IDX_WIDTH_DIA]/2,-22,30.25]) rotate(a=[0,-90,0]) cylinder(h = idler_bearing_x_end[1], r=idler_bearing_x_end[IDX_OUTER_DIA]/2, $fn=30);
+ #translate(v=[0,-22,30.25]) rotate(a=[0,-90,0]) cylinder(h = 80, r=idler_bearing_x_end[IDX_INNER_DIA]/2+.3, $fn=30);
+ #translate(v=[2,-22,30.25]) rotate(a=[0,-90,0]) cylinder(h = 10, r=idler_bearing_x_end[IDX_INNER_DIA]/2 + 1, $fn=30);
+ #translate(v=[-22,-22,30.25]) rotate(a=[0,-90,0]) rotate(a=[0,0,30]) cylinder(h = 80, r=idler_bearing_x_end[IDX_INNER_DIA], $fn=6);
  }
 }
  
