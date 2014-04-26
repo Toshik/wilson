@@ -1,0 +1,3 @@
+[submodule "scad/libraries/MCAD"]
+	path = scad/libraries/MCAD
+	url = https://github.com/elmom/MCAD.git
