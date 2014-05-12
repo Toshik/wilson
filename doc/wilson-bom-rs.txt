@@ -23,9 +23,9 @@ GT2 pulley                               2
 
 Nuts & Bolts                                       
 M10 nuts and washers                    12                    
-M5 x 10mm machine screw                 36                    
+M5 x 10mm machine screw                 37                    
 M5 hex nut                               2                    
-M5 t slot nut                           36                    
+M5 t slot nut                           37                    
 M4 x 20mm machine screw                  6                    
 M4 hex nut                               6                    
 M3 x 8mm machine screw                   1                    
